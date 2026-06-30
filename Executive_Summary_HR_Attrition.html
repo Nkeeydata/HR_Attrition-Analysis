@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Executive Summary: Employee Attrition Classification Results</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef1f4;
+    margin: 0;
+    padding: 0;
+    color: #1c2733;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 24px auto;
+    background: #f4f6f8;
+    box-shadow: 0 0 0 1px #d7dce1;
+  }
+  .header {
+    background: #16263c;
+    color: #fff;
+    text-align: center;
+    padding: 28px 20px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #41566b;
+    margin: 18px 0 10px 0;
+    position: relative;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 230px;
+    margin-bottom: 6px;
+  }
+  .tab-color {
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding: 10px 30px 26px 30px;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    text-align: center;
+    padding: 18px 26px;
+    min-width: 190px;
+  }
+  .stat-number {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1f6fb2;
+  }
+  .stat-label {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  .stat-sub {
+    font-size: 12px;
+    color: #5a6b7a;
+    margin-top: 2px;
+  }
+  .top-row {
+    display: flex;
+    gap: 22px;
+    padding: 0 26px;
+    align-items: flex-start;
+  }
+  .overview-box {
+    flex: 1;
+    min-width: 280px;
+  }
+  .overview-title {
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .overview-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2b3742;
+  }
+  .panels {
+    display: flex;
+    gap: 22px;
+    padding: 22px 26px;
+  }
+  .panel {
+    flex: 1;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  }
+  .panel-header {
+    background: #16263c;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px;
+  }
+  .panel-body {
+    padding: 16px 20px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .panel-body.insights {
+    background: #e9edf1;
+  }
+  ul.insights-list {
+    margin: 0;
+    padding-left: 18px;
+  }
+  ul.insights-list li {
+    margin-bottom: 14px;
+  }
+  .bullet-dot {
+    color: #1f6fb2;
+  }
+  .next-steps-item {
+    margin-bottom: 10px;
+  }
+  .next-steps-item b {
+    color: #2e7d32;
+  }
+  .footer {
+    background: #16263c;
+    color: #cfd8e3;
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Executive Summary: Classification Modelling Results</h1>
+  </div>
+
+  <div class="subtitle">
+    <div class="tabs">
+      <div class="tab-color" style="background:#2f6fb2;"></div>
+      <div class="tab-color" style="background:#c0392b;"></div>
+      <div class="tab-color" style="background:#d4a017;"></div>
+      <div class="tab-color" style="background:#2e7d32;"></div>
+    </div>
+    Employee Attrition Prediction Project
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-number">99.1%</div>
+      <div class="stat-label">Accuracy</div>
+      <div class="stat-sub">Correct predictions on test set</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">0.99</div>
+      <div class="stat-label">AUC Score</div>
+      <div class="stat-sub">Ability to rank leavers vs. stayers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">14,999</div>
+      <div class="stat-label">Dataset Size</div>
+      <div class="stat-sub">Employees used for training &amp; testing</div>
+    </div>
+  </div>
+
+  <div class="top-row">
+    <div class="overview-box">
+      <div class="overview-title">Project Overview</div>
+      <div class="overview-text">
+        The HR analytics team sought to develop a supervised classification model to predict
+        which employees are at risk of leaving the company, using satisfaction, performance,
+        workload, tenure, and compensation data. The model was built using a Random Forest
+        Classifier to capture non-linear relationships between employee experience and attrition.
+      </div>
+    </div>
+  </div>
+
+  <div class="panels">
+    <div class="panel">
+      <div class="panel-header">Key Insights</div>
+      <div class="panel-body insights">
+        <ul class="insights-list">
+          <li><span class="bullet-dot">●</span> Satisfaction level is the single strongest driver of attrition — employees who leave report markedly lower satisfaction scores than those who stay.</li>
+          <li><span class="bullet-dot">●</span> Workload extremes matter: employees with very high project counts and monthly hours, or very few, are more likely to leave, pointing to burnout and disengagement as twin risks.</li>
+          <li><span class="bullet-dot">●</span> Tenure plays a role: attrition risk rises around the 4&ndash;6 year mark, suggesting a "plateau point" where employees reassess their career path.</li>
+          <li><span class="bullet-dot">●</span> Lower salary bands and lack of recent promotion are linked to higher attrition, giving HR clear, actionable levers (pay review, promotion pathways) to target retention.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">Details</div>
+      <div class="panel-body">
+        The team built a Random Forest Classifier (300 trees) to predict attrition using 9
+        structural and engagement features, after one-hot encoding department and ordinally
+        encoding salary band.
+        <br><br>
+        The model achieves 99.1% accuracy and an AUC of 0.99 on the held-out test set, with
+        precision of 99.6% and recall of 96.6% for identifying employees who left &mdash; meaning
+        very few at-risk employees are missed and very few false alarms are raised.
+        <br><br>
+        A simpler Logistic Regression baseline reached only 79.6% accuracy and an AUC of 0.83,
+        confirming that attrition risk is driven by non-linear interactions (e.g., satisfaction
+        combined with workload) that linear models cannot fully capture.
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 26px 22px 26px;">
+    <div class="panel">
+      <div class="panel-header" style="background:#16263c;">Next Steps</div>
+      <div class="panel-body">
+        <div class="next-steps-item"><b>Validate before deployment:</b> Confirm no data leakage and test the model on a future, out-of-time cohort given the unusually high accuracy.</div>
+        <div class="next-steps-item"><b>Operationalize risk scores:</b> Build a dashboard ranking employees by predicted attrition probability for proactive HR outreach.</div>
+        <div class="next-steps-item"><b>Enrich data:</b> Add finer-grained compensation, engagement survey, and manager-relationship data to improve precision further.</div>
+        <div class="next-steps-item"><b>Monitor fairness:</b> Audit predictions across departments and salary bands to ensure no group is unfairly flagged.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Employee Attrition Prediction Project &nbsp;|&nbsp; Random Forest Classifier &nbsp;|&nbsp; Confidential
+  </div>
+
+</div>
+</body>
+</html>
