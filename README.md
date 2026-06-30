@@ -1,6 +1,4 @@
 [README_HR.md](https://github.com/user-attachments/files/29502611/README_HR.md)
-# HR_Attrition-Analysis
-This model helps to find out what was responsible for the high rate of employees leaving the company. This will allow us to see the most feature(s) responsible for this employee churn
 # HR Employee Attrition Prediction
 
 ## Project Overview
